@@ -1,0 +1,131 @@
+<%- include('layout/header') %>
+<div class="container-fluid dashboard-content">
+  <!-- ============================================================== -->
+  <!-- pageheader -->
+  <!-- ============================================================== -->
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="page-header">
+        <h2 class="pageheader-title">Add User</h2>
+
+        <div class="page-breadcrumb">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="" class="breadcrumb-link">Dashboard</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="" class="breadcrumb-link">Manage User</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Edit User
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- end pageheader -->
+  <!-- ============================================================== -->
+
+  <div class="row">
+    <!-- ============================================================== -->
+    <!-- horizontal form -->
+    <!-- ============================================================== -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="card">
+        <h5 class="card-header">User</h5>
+        <div class="card-body">
+          <form
+            id="form"
+            action="/add_a_user"
+            enctype="multipart/form-data"
+            method="POST"
+          >
+            <div class="form-group row">
+              <label for="name" class="col-3 col-lg-2 col-form-label text-right"
+                >Name</label
+              >
+              <div class="col-9 col-lg-10">
+                <input id="name" type="text" name="name" class="form-control" />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label
+                for="email"
+                class="col-3 col-lg-2 col-form-label text-right"
+                >Email</label
+              >
+              <div class="col-9 col-lg-10">
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  data-parsley-type="email"
+                  placeholder="Email"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label
+                for="phone"
+                class="col-3 col-lg-2 col-form-label text-right"
+                >Phone</label
+              >
+              <div class="col-9 col-lg-10">
+                <input
+                  id="phone"
+                  type="text"
+                  data-parsley-type=""
+                  name="phone"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label
+                for="image"
+                class="col-3 col-lg-2 col-form-label text-right"
+                >Image</label
+              >
+              <div class="col-9 col-lg-10">
+                <input
+                  id="image"
+                  type="file"
+                  data-parsley-type=""
+                  name="image"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+            <div class="row pt-2 pt-sm-5 mt-1">
+              <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
+                <!-- <label class="be-checkbox custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input"><span class="custom-control-label">Remember me</span>
+                                    </label> -->
+              </div>
+              <div class="col-sm-6 pl-0">
+                <p class="text-right">
+                  <button type="submit" class="btn btn-space btn-primary">
+                    Add User
+                  </button>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end horizontal form -->
+    <!-- ============================================================== -->
+  </div>
+</div>
+<%- include('layout/footer') %>
